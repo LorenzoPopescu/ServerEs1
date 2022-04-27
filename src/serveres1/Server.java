@@ -31,7 +31,7 @@ public class Server {
             ss = new ServerSocket(porta);
             System.out.println("Server in ascolto...");
             ss.setSoTimeout(3000);
-            cd = new CountDown(2000);
+            cd = new CountDown(10);
             cd.start();
         }catch (IOException ex) {
             System.err.println("errore nella creazione del server e nell'avvio del servizio");

@@ -20,13 +20,14 @@ public class CountDown extends Thread{
     
     @Override
     public void run(){
-        for(int i = n; i>0; i--){
-            System.out.println("Tempo trascorso: "+n);
+        for(int i = n; i>=0; i--){
+            System.out.println("Tempo trascorso: "+i);
             try {
                 sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(CountDown.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        System.out.println("Sessione terminata");
     }
 }
